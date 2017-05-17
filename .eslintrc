@@ -1,0 +1,33 @@
+---
+extends: airbnb
+parser: babel-eslint
+env:
+  browser: true
+  node: true
+rules:
+  spaced-comment: off
+  no-unused-vars: off
+  no-empty: off
+  react/wrap-multilines: off
+  react/no-multi-comp: off
+  no-constant-condition: off
+  react/jsx-no-bind: off
+  react/prop-types: off
+  arrow-body-style: off
+  react/prefer-stateless-function: off
+  semi: off
+  no-param-reassign:
+  - error
+  - props: false
+  comma-dangle:
+  - error
+  - never
+  no-useless-constructor: off
+  no-useless-computed-key: off
+  jsx-a11y/no-static-element-interactions: warn
+  react/jsx-closing-bracket-location:
+  - 1
+  - selfClosing: after-props
+    nonEmpty: after-props
+ecmaFeatures:
+  experimentalObjectRestSpread: true
