@@ -1,0 +1,44 @@
+.layout {
+  height: 100%;
+  :global {
+    .ant-layout-header{
+      background: #fff;
+      padding: 0;
+      height: 48px;
+      line-height: 48px;
+      .trigger {
+        font-size: 18px;
+        line-height: inherit;
+        padding: 0 16px;
+        cursor: pointer;
+        transition: color .3s;
+        &:hover {
+          color: #108ee9;
+        }
+      }
+    }
+    .ant-layout-content {
+      margin: 24px 16px;
+      padding: 24px;
+      background: #fff;
+      // min-Height: 280px;
+    }
+
+    .logo {
+      height: 32px;
+      background: #333;
+      border-radius: 6px;
+      margin: 16px;
+    }
+
+    .ant-layout-sider-collapsed {
+      .anticon {
+        font-size: 16px;
+      }
+      .nav-text {
+        display: none;
+      }
+    }
+
+  }
+}

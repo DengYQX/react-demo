@@ -5,6 +5,16 @@
 @background_color_1: #0078FF;
 
 /* CSS Document */
+:global {
+  .rcb-table-operation {
+    > a {
+      margin-right: 8px;
+    }
+  }
+  .rcb-line {
+    margin-bottom: 16px;
+  }
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -18,13 +28,6 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
-}
-* {
-	html {
-		background-image: url(about:blank);
-		background-attachment: fixed;
-		zoom: expression(function(ele){ ele.style.zoom = "1"; document.execCommand("BackgroundImageCache", false, true); }(this));
-	}
 }
 form {
 	margin: 0px;
@@ -63,20 +66,6 @@ dd {
 	margin: 0px;
 	padding: 0px;
 	border: 0;
-}
-input {
-	margin: 0px;
-	padding: 0px;
-	border: 0;
-	color: @color_1;
-	margin: 0;
-	padding: 0;
-	font-size: 12px;
-	font-family: @font_family_2;
-	vertical-align: middle;
-	&:focus {
-		outline: none;
-	}
 }
 h1 {
 	margin: 0px;

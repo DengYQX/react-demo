@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import MainLayout from '../layout/MainLayout'
+import '../styles'
 
 class App extends Component {
   constructor(props) {
@@ -7,15 +9,15 @@ class App extends Component {
   render() {
     const { children, location } = this.props
     return (
-      <div location={location}>
+      <MainLayout location={location}>
         {children}
-      </div>
+      </MainLayout>
     )
   }
 }
 
 App.propTypes = {
-  // Injected by React Router
+    // Injected by React Router
   children: PropTypes.node // eslint-disable-line
 }
 
