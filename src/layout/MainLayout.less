@@ -1,21 +1,26 @@
+@font_family: "Microsoft YaHei";
+@font_color: #FFF;
+@font_14: 14px;
 .layout {
   height: 100%;
   :global {
     .ant-layout-header{
-      background: #fff;
+      background: #055089;
       padding: 0;
-      height: 48px;
-      line-height: 48px;
-      .trigger {
-        font-size: 18px;
-        line-height: inherit;
-        padding: 0 16px;
-        cursor: pointer;
-        transition: color .3s;
-        &:hover {
-          color: #108ee9;
+      height: 80px;
+      line-height: 80px;
+      :global{
+           span{
+           font-size: @font_14;
+           font-family: @font_family;
+           color: @font_color;
+           }
+           a{
+           font-size: @font_14;
+           font-family: @font_family;
+           color: @font_color;
+           }
         }
-      }
     }
     .ant-layout-content {
       margin: 24px 16px;
@@ -25,10 +30,13 @@
     }
 
     .logo {
-      height: 32px;
-      background: #333;
+      height: 52px;
+      width: 52px;
+      background: url(../../img/kameng-system-logo.png) no-repeat;
       border-radius: 6px;
-      margin: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 40px;
     }
 
     .ant-layout-sider-collapsed {

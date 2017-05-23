@@ -3,12 +3,14 @@ import { Router, Route, Redirect, IndexRoute, browserHistory, hashHistory } from
 import NotFound from '../components/notFound';
 import App from '../components/';
 import Home from '../components/home';
+import Statistical from '../components/statistical';
 
 function Routes({ history }) {
   return (
     <Router history={history}>
       <Route path="/" component={App}>
         <Route path="/index" component={Home} />
+        <Route path="statistical" component={Statistical} />
         <IndexRoute component={Home} />
       </Route>
       <Route path="*" component={NotFound} />
