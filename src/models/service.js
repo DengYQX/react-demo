@@ -1,5 +1,4 @@
-import qs from 'qs';
-import xFetch from '../util/xFetch';
+import { service } from '../api';
 
 export default {
   namespace: 'services',
@@ -38,6 +37,10 @@ export default {
     },
     * remove({ payload: id }, { call, put }) {
       yield call(service.remove, id);
+      yield put({ type: 'reload' });
+    },
+    * save({ payload: values }, { call, put }) {
+      yield call(service.save, values);
       yield put({ type: 'reload' });
     },
     * reload(action, { put, select }) {

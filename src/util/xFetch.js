@@ -16,7 +16,9 @@ function check404(res) {
 }
 
 function jsonParse(res) {
-  return res.json().then(jsonResult => ({ ...res, jsonResult }));
+  return res.json().then(jsonResult => ({ ...res,
+    jsonResult
+  }));
 }
 
 function errorMessageParse(res) {

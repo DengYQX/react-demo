@@ -22,18 +22,18 @@ function respone(req, res) {
   const urlObj = url.parse(req.url, true);
   const fileName = urlObj.pathname;
   if (/\.json$/.test(fileName)) {
-    const filePath = fileName.replace(/^\/api\//, '');
+    const filePath = fileName.replace(/^\/km-service\//, '');
     fetchFileRespone(res, filePath);
   }
 }
 
 export default {
   // 本地数据mock
-  'GET /api/*': function(req, res) {
+  'GET /km-service/*': function(req, res) {
     respone(req, res);
   },
   // 本地数据mock
-  'POST /api/*': function(req, res) {
+  'POST /km-service/*': function(req, res) {
      respone(req, res);
   },
   // 支持值为 Object 和 Array
