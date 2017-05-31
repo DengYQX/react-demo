@@ -5,8 +5,14 @@ import xFetch, {
 // 查询服务列表
 export const query = async({
   params
-}) => get('/km-service/testEchartsObject.json', {
+}) => post('/km-service/testEchartsObject.json', {
   params
+});
+
+export const user = async({
+  name, password
+}) => post('/km-service/user.json', {
+  name, password
 });
 // 新增、修改
 export const save = async data => post('/api/home/list.json'.HOME_SAVE, data);

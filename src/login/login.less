@@ -1,0 +1,62 @@
+.loginBox {
+  width: 100%;
+  height: 100%;
+  background: url(../../img/backgroupImg.jpg);
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  overflow-y: hidden;
+  .backImg{
+    width: 1200px;
+    height: 720px;
+    background: url(../../img/1.png);
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    margin-top: -400px;
+    .authBox{
+      width: 400px;
+      height: 300px;
+      display: inline-block;
+      position: absolute;
+      right: 12%;
+      top: 38%;
+      border-radius: 10px;
+      -webkit-box-shadow:0 0 10px #666;
+      -moz-box-shadow:0 0 10px #666;
+      box-shadow:0 0 10px #666;
+      p{
+        text-align: center;
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+      }
+      .inputBox{
+        width: 390px;
+        margin: 0 auto;
+      }
+      :global{
+        .ant-input {
+          height: 40px;
+        }
+        .ant-input:not(:first-child) {
+            padding-left: 30px;
+            border: 1px solid #CCC;
+        }
+        .ant-form-item {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+      }
+    }
+  .logobox{
+       position: absolute;
+       bottom: 1px;
+       left: 45%;
+       .logo{
+         width: 195px;
+         height: 52px;
+         background: url(../../img/logo.jpg) no-repeat;
+       }
+     }
+  }
+}

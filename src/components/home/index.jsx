@@ -83,7 +83,7 @@ class App extends Component {
   }
   componentWillMount() {
     const data = [10, 52, 200, 334, 390, 330, 220, 154, 123, 67, 123, 34];
-    this.setState({ data });
+    //this.setState({ data });
     setTimeout(() => {
       const myChart = Echarts.init(document.getElementById('chartElement'));
       myChart.setOption(chartOption(data));
@@ -170,7 +170,7 @@ class App extends Component {
           <Col span={20} style={{ height: 300 }} >
             <Table dataSource={list.items} columns={columns} rowKey="id" pagination={pagination} />
           </Col>
-      </Row>
+        </Row>
       </div>
     )
   }
@@ -179,7 +179,7 @@ function mapStateToProps(state, ownProps) {
   return {
     data: state.data,
     list: state.services.list,
-    loading: !!state.loading.home
+    loading: !!state.loading.global
   }
 }
 

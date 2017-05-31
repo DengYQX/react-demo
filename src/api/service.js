@@ -7,4 +7,4 @@ const API = {
   SERVICES_DETAIL: '/km-service/services/detail.json'
 }
 // 查询服务列表
-export const query = async ({ page, size, key }) => get(API.SERVICES_QUERY, { page, size, key });
+export const query = async ({ page, size, key }) => post(API.SERVICES_QUERY, { page, size, key });

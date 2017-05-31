@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class App extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div >
-        123465
+        123465啊啊啊啊啊
       </div>
     )
   }

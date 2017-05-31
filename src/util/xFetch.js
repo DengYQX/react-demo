@@ -38,9 +38,17 @@ function xFetch(url2, options) {
   const opts = {
     ...options,
     mode: 'cors',
-    "Content-Type": "application/json"
+    'Content-Type': 'application/json'
   };
 
+  if (opts.method && opts.method.toUpperCase() === 'POST') {
+    opts.headers = {
+      'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      ...opts.headers
+    };
+  } else if (!opts.method || (opts.method && opts.method.toUpperCase() === 'GET' && url2.indexOf('?') > -1)) {
+    url2 += '&_input_charset=UTF-8';
+  }
   function check401(res) {
     // location.href = '/401';
     if (res.status === 401) {
